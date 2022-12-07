@@ -1,5 +1,6 @@
 import React from "react";
 import Ticket from "./Ticket";
+import PropTypes from "prop-types";
 
 function TicketList(props) {
   return (
@@ -19,5 +20,10 @@ function TicketList(props) {
     </React.Fragment>
   );
 }
+
+TicketList.propTypes = {
+  ticketList: PropTypes.array,
+  onTicketSelection: PropTypes.func,
+};
 
 export default TicketList;
